@@ -63,4 +63,16 @@ blogUtils.warnNonLabelledPosts = function() {
             $(this).find('.post-title').append("<span style='color: red; font-size: large; font-weight: bold'>NO LABELS!!! NO LABELS!!!</span>");
         }
     });
-}
+};
+
+blogUtils.configureMathJax = function() {
+    MathJax.Hub.Config({
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] }
+    });
+};
