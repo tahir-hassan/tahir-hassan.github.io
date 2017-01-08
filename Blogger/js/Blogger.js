@@ -57,6 +57,7 @@ blogUtils.highlightPreCode = function() {
         
         if (typeof $e.attr('height') === 'string') {
             $e.css('max-height', $e.attr('height'));
+            $e.css('overflow-y', 'auto');
             $e.removeAttr('height');
         }
     });
