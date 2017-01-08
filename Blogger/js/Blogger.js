@@ -51,8 +51,14 @@ blogUtils.substituteBacktickWithVar = function ($elem) {
 
 blogUtils.highlightPreCode = function() {
     $('pre code').each(function (i, e) {
-        $(e).text($(e).text().trim());
+        $e = $(e);
+        $e.text($e.text().trim());
         hljs.highlightBlock(e);
+        
+        if (typeof $e.attr('height') === 'string') {
+            $e.css('max-height', $e.attr('height'));
+            $e.removeAttr('height');
+        }
     });
 };
 
