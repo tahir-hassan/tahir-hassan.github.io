@@ -57,11 +57,6 @@ blogUtils.highlightPreCode = function() {
         if (e.hasAttribute('height')) {
             $e.css('max-height', $e.attr('height'));
             $e.css('overflow-y', 'auto');
-			var parent = $e.parent();
-            
-			parent.css('max-height', $e.attr('height'));
-            parent.css('max-height', '+=1');
-            parent.css('overflow-y', 'auto');
             $e.removeAttr('height');
         };
     });
