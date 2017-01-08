@@ -54,12 +54,14 @@ blogUtils.highlightPreCode = function() {
         $e = $(e);
         $e.text($e.text().trim());
         hljs.highlightBlock(e);
-        
-        if (typeof $e.attr('height') === 'string') {
+        if (e.hasAttribute('height')) {
             $e.css('max-height', $e.attr('height'));
             $e.css('overflow-y', 'auto');
             $e.removeAttr('height');
-        }
+            
+            $e.parent().css('max-height', $e.attr('height'));
+            $e.parent().css('overflow-y', 'auto');
+        };
     });
 };
 
