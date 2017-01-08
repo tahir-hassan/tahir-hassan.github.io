@@ -55,3 +55,12 @@ blogUtils.highlightPreCode = function() {
         hljs.highlightBlock(e);
     });
 };
+
+blogUtils.warnNonLabelledPosts = function() {
+    $('div.post-outer:eq(0)').each(function(index) { 
+        if ($.trim($(this).find('span.post-labels').text()).length == 0) {
+            $(this).addClass('no-labels');
+            $(this).find('.post-title').append("<span style='color: red; font-size: large; font-weight: bold'>NO LABELS!!! NO LABELS!!!</span>");
+        }
+    });
+}
