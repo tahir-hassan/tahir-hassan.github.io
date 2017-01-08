@@ -54,11 +54,14 @@ blogUtils.highlightPreCode = function() {
         var $e = $(e);
         $e.text($e.text().trim());
         hljs.highlightBlock(e);
-        if (e.hasAttribute('height')) {
-            $e.css('max-height', $e.attr('height'));
-            $e.css('overflow-y', 'auto');
-            $e.removeAttr('height');
-        };
+        
+        [ $e, $e.parent() ].forEach(function($elem) {
+            if ($elem[0].hasAttribute('height')) {
+                $elem.css('max-height', $elem.attr('height'));
+                $elem.css('overflow-y', 'auto');
+                $elem.removeAttr('height');
+            }
+        });
     });
 };
 
