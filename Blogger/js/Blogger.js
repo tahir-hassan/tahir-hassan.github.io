@@ -48,8 +48,3 @@ blogUtils.substituteBacktickWithVar = function ($elem) {
         }
     });
 };
-
-$(function () {
-    blogUtils.substituteBacktickWithVar($('div.post-body'));
-    $('body').removeClass('wait-backtickvar');
-});
