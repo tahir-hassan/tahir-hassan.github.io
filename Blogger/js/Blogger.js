@@ -48,3 +48,10 @@ blogUtils.substituteBacktickWithVar = function ($elem) {
         }
     });
 };
+
+blogUtils.highlightPreCode = function() {
+    $('pre code').each(function (i, e) {
+        $(e).text($(e).text().trim());
+        hljs.highlightBlock(e);
+    });
+};
