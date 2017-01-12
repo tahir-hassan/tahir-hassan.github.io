@@ -368,7 +368,8 @@ ul.posts li a {
     list-style-type: disc;
     list-style-position: outside;
     text-indent: 0;
-    padding-left: 0 !important; }
+    padding-left: 0 !important;
+    margin-left: 0.5em; }
 
 div#BloggerButton1.widget a {
   font-family: Verdana,Geneva,sans-serif; }
