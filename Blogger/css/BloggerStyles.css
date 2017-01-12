@@ -1,2 +1,80 @@
-.tahir{color:red}.wait-hljs,.wait-backtickvar{visibility:hidden}.clearfix:after{content:" ";visibility:hidden;display:block;height:0;clear:both}var{background-color:#F8F8F8;border:1px solid #f0f0f0;padding:1px 3px;border-radius:3px}div.blogger-clickTrap{display:none !important}div.post-outer.no-labels{border:1px solid red}div.post div.post-body,div.post div.post-body p{font-family:Verdana,Geneva,sans-serif}div.post div.post-body var{font-family:monospace;font-style:normal;font-weight:bold;color:#3F3F3F}table.tbl{border:1px solid #393939;border-collapse:collapse}table.tbl td,table.tbl th{border-bottom:1px solid #393939;padding:5px}table.tbl tr:nth-child(even) td{background-color:#DCEEF9}table.tbl td{border-left:1px solid #393939}table.tbl th{border-left:1px solid #6B6B6B}table.tbl th{background-color:#003366;color:white;font-weight:bold}h4,h5{color:#c60}.post a:visited{color:#5588AA}img.center{display:block;margin-left:auto;margin-right:auto}ul.posts li a{font-family:Verdana,Geneva,sans-serif}.BlogArchive #ArchiveList ul.posts li{list-style:disc outside none !important}div#BloggerButton1.widget a{font-family:Verdana,Geneva,sans-serif}#main-sidebar-wrapper{display:flex}
+.wait-hljs, .wait-backtickvar {
+  visibility: hidden; }
+
+.clearfix:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+var {
+  background-color: #F8F8F8;
+  border: 1px solid #f0f0f0;
+  padding: 1px 3px;
+  border-radius: 3px; }
+
+div.blogger-clickTrap {
+  display: none !important; }
+
+div.post-outer.no-labels {
+  border: 1px solid red; }
+
+div.post div.post-body,
+div.post div.post-body p {
+  font-family: Verdana,Geneva,sans-serif; }
+
+div.post div.post-body var {
+  font-family: monospace;
+  font-style: normal;
+  font-weight: bold;
+  color: #3F3F3F; }
+
+table.tbl {
+  border: 1px solid #393939;
+  border-collapse: collapse; }
+
+table.tbl td,
+table.tbl th {
+  border-bottom: 1px solid #393939;
+  padding: 5px; }
+
+table.tbl tr:nth-child(even) td {
+  background-color: #DCEEF9; }
+
+table.tbl td {
+  border-left: 1px solid #393939; }
+
+table.tbl th {
+  border-left: 1px solid #6B6B6B; }
+
+table.tbl th {
+  background-color: #003366;
+  color: white;
+  font-weight: bold; }
+
+h4, h5 {
+  color: #CC6600; }
+
+.post a:visited {
+  color: #5588AA; }
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+ul.posts li a {
+  font-family: Verdana,Geneva,sans-serif; }
+
+.BlogArchive #ArchiveList ul.posts li {
+  list-style: disc outside none !important; }
+
+div#BloggerButton1.widget a {
+  font-family: Verdana,Geneva,sans-serif; }
+
+#main-sidebar-wrapper {
+  display: flex; }
+
 /*# sourceMappingURL=BloggerStyles.css.map */
