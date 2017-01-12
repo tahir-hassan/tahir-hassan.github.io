@@ -365,7 +365,9 @@ ul.posts li a {
 .BlogArchive #ArchiveList {
   font-family: Verdana, Geneva, sans-serif; }
   .BlogArchive #ArchiveList ul.posts li {
-    list-style: disc outside none !important; }
+    list-style-type: disc;
+    list-style-position: inside;
+    text-indent: 0; }
 
 div#BloggerButton1.widget a {
   font-family: Verdana,Geneva,sans-serif; }
