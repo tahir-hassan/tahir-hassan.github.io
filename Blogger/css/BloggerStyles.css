@@ -32,10 +32,7 @@ body {
   color: #333333;
   font-family: Georgia Serif;
   font-size: 1.4rem;
-  text-align: center; }
-
-/* test code */
-html, body {
+  text-align: center;
   max-width: 960px;
   margin: 0 auto;
   overflow-x: hidden; }
