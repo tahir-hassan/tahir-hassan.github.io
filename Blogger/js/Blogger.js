@@ -82,6 +82,7 @@ blogUtils.configureMathJax = function() {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
             displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
         },
-        "HTML-CSS": { availableFonts: ["TeX"] }
+        "HTML-CSS": { availableFonts: ["TeX"] },
+        messageStyle: "none"
     });
 };
