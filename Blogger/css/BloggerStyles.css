@@ -317,7 +317,7 @@ div.post-outer.no-labels {
 
 div.post div.post-body,
 div.post div.post-body p {
-  font-family: Verdana,Geneva,sans-serif; }
+  font-family: Verdana, Geneva, sans-serif; }
 
 div.post div.post-body var {
   font-family: monospace;
@@ -362,8 +362,10 @@ img.center {
 ul.posts li a {
   font-family: Verdana,Geneva,sans-serif; }
 
-.BlogArchive #ArchiveList ul.posts li {
-  list-style: disc outside none !important; }
+.BlogArchive #ArchiveList {
+  font-family: Verdana, Geneva, sans-serif; }
+  .BlogArchive #ArchiveList ul.posts li {
+    list-style: disc outside none !important; }
 
 div#BloggerButton1.widget a {
   font-family: Verdana,Geneva,sans-serif; }
