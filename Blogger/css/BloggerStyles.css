@@ -85,7 +85,7 @@ a img {
 #outer-wrapper {
   text-align: left;
   padding: 10px;
-  font: normal normal 100% Georgia, Serif; }
+  /* font: $bodyfont; */ }
 
 #main-wrapper, #sidebar-wrapper {
   word-wrap: break-word;
