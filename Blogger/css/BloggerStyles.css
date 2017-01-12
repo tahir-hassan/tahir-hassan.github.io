@@ -37,7 +37,8 @@ body {
 /* test code */
 html, body {
   max-width: 960px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow-x: hidden; }
 
 /* this code is necessary for highlight js to render properly. */
 .hljs, pre code {
