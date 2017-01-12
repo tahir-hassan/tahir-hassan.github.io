@@ -367,7 +367,8 @@ ul.posts li a {
   .BlogArchive #ArchiveList ul.posts li {
     list-style-type: disc;
     list-style-position: outside;
-    text-indent: 0; }
+    text-indent: 0;
+    padding-left: 0; }
 
 div#BloggerButton1.widget a {
   font-family: Verdana,Geneva,sans-serif; }
