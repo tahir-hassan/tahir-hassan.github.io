@@ -34,6 +34,7 @@ body {
   font-size: 1.4rem;
   text-align: center; }
 
+/* these styles have to be on both the body and html tags */
 body, html {
   max-width: 960px;
   margin: 0 auto;
