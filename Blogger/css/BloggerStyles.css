@@ -246,7 +246,8 @@ form#custom-search-form {
   display: flex;
   flex-wrap: wrap; }
   form#custom-search-form input {
-    display: block; }
+    display: block;
+    height: 1.2em; }
   form#custom-search-form input[type=text] {
     flex: 2;
     margin-right: 0.25em;
