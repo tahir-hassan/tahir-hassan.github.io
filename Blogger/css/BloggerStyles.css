@@ -49,7 +49,7 @@ body, html {
   font-family: Consolas, monospace !important;
   font-size: 90% !important; }
 
-/* MOBILE STYLES */
+/* MOBILE STYLES - del this message */
 @media (max-device-width: 640px) {
   .hljs, pre code, var {
     font-size: 75% !important; } }
