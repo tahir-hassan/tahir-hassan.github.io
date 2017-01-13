@@ -245,9 +245,12 @@ form#custom-search-form {
   margin-top: 1em;
   display: flex;
   flex-wrap: wrap; }
+  form#custom-search-form input {
+    display: block; }
   form#custom-search-form input[type=text] {
     flex: 2;
-    margin-right: 0.25em; }
+    margin-right: 0.25em;
+    margin-bottom: 0.25em; }
   form#custom-search-form input[type=submit] {
     flex: 1; }
 
