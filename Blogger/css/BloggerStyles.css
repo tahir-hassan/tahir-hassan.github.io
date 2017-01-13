@@ -245,7 +245,8 @@ form#custom-search-form {
   margin-top: 1em;
   display: flex; }
   form#custom-search-form input[type=text] {
-    flex: 2; }
+    flex: 2;
+    margin-right: 0.25em; }
   form#custom-search-form input[type=submit] {
     flex: 1; }
 
