@@ -243,7 +243,8 @@ form#custom-search-form, .sidebar .widget, .main .widget {
 
 form#custom-search-form {
   margin-top: 1em;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
   form#custom-search-form input[type=text] {
     flex: 2;
     margin-right: 0.25em; }
