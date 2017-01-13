@@ -242,7 +242,8 @@ form#custom-search-form, .sidebar .widget, .main .widget {
   padding: 0 0 1.5em; }
 
 #custom-search-form-wrapper {
-  margin-top: 1em; }
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 form#custom-search-form {
   margin: 0 -5px;
