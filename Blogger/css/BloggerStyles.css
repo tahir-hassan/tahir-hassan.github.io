@@ -242,18 +242,19 @@ form#custom-search-form, .sidebar .widget, .main .widget {
   padding: 0 0 1.5em; }
 
 form#custom-search-form {
-  margin-top: 1em;
+  margin: 0 -5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
   form#custom-search-form input {
+    margin: 0 5px;
     display: block;
     height: 1.8em;
     box-sizing: border-box; }
   form#custom-search-form input[type=text] {
     flex: 2;
-    margin-right: 0.25em;
-    margin-bottom: 0.25em; }
+    /* margin-right: 0.25em;
+    margin-bottom: 0.25em; */ }
   form#custom-search-form input[type=submit] {
     flex: 1; }
 
