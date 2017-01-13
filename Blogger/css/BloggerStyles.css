@@ -257,8 +257,7 @@ form#custom-search-form {
     box-sizing: border-box; }
   form#custom-search-form input[type=text] {
     flex: 2;
-    /* margin-right: 0.25em;
-    margin-bottom: 0.25em; */ }
+    width: 100%; }
   form#custom-search-form input[type=submit] {
     flex: 1; }
 
