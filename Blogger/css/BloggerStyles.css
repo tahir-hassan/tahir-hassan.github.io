@@ -50,7 +50,7 @@ body, html {
   font-size: 90% !important; }
 
 /* MOBILE STYLES */
-@media (max-device-width: 640px) {
+@media (max-width: 640px) {
   .hljs, pre code, var {
     font-size: 75% !important; } }
 a:link {
@@ -91,7 +91,7 @@ a img {
   display: flex;
   flex-direction: row; }
 
-@media (max-device-width: 640px) {
+@media (max-width: 640px) {
   #main-sidebar-wrapper {
     flex-direction: column; } }
 #main-wrapper, #sidebar-wrapper {
