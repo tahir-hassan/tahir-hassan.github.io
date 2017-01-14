@@ -49,7 +49,7 @@ body, html {
   font-family: Consolas, monospace !important;
   font-size: 90% !important; }
 
-/* MOBILE STYLES - del this message */
+/* MOBILE STYLES */
 @media (max-device-width: 640px) {
   .hljs, pre code, var {
     font-size: 75% !important; } }
@@ -87,6 +87,13 @@ a img {
   padding: 10px;
   font: normal normal 100% Georgia, Serif; }
 
+#main-sidebar-wrapper {
+  display: flex;
+  flex-direction: row; }
+
+@media (max-device-width: 640px) {
+  #main-sidebar-wrapper {
+    flex-direction: column; } }
 #main-wrapper, #sidebar-wrapper {
   word-wrap: break-word;
   /* fix for long text breaking sidebar float in IE */
@@ -390,8 +397,5 @@ ul.posts li a {
 
 div#BloggerButton1.widget a {
   font-family: Verdana,Geneva,sans-serif; }
-
-#main-sidebar-wrapper {
-  display: flex; }
 
 /*# sourceMappingURL=BloggerStyles.css.map */
