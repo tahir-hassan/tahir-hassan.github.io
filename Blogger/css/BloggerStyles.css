@@ -23,11 +23,9 @@ Updated by: Blogger Team
 /* Post Footer Font */
 /* Side where text starts in blog language */
 /* Side where text ends in blog language */
-/*
 html {
-    font-size: 62.5%;
-}
-    */
+  font-size: 62.5%; }
+
 body {
   background: #ffffff;
   margin: 0;
