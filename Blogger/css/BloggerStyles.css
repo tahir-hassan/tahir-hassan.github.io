@@ -123,8 +123,18 @@ h2 {
 /* Posts
 -----------------------------------------------
  */
-h2.date-header {
+.date-header, .post-footer {
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
+  line-height: 1.4em; }
+
+.date-header {
   margin: 1.5em 0 .5em; }
+
+.post-footer {
+  margin: .75em 0; }
 
 .post {
   margin: .5em 0 1.5em;
@@ -154,14 +164,6 @@ h2.date-header {
 
 .post-body blockquote {
   line-height: 1.3em; }
-
-.post-footer {
-  margin: .75em 0;
-  color: #999999;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
-  line-height: 1.4em; }
 
 .comment-link {
   margin-left: .6em; }
