@@ -23,9 +23,12 @@ Updated by: Blogger Team
 /* Post Footer Font */
 /* Side where text starts in blog language */
 /* Side where text ends in blog language */
+/* 
+// the following `html` style needs to be commented out when bootstrap 4 is added
 html {
-  font-size: 62.5%; }
-
+    font-size: 62.5%;
+}
+*/
 body {
   background: #ffffff;
   margin: 0;
