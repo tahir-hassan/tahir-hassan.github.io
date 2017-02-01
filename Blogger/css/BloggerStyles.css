@@ -123,7 +123,15 @@ h2 {
 /* Posts
 -----------------------------------------------
  */
-.date-header, .post-footer {
+.post-footer {
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
+  line-height: 1.4em;
+  margin: .75em 0; }
+
+.widget-header, .date-header {
   color: #999999;
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -132,9 +140,6 @@ h2 {
 
 .date-header {
   margin: 1.5em 0 .5em; }
-
-.post-footer {
-  margin: .75em 0; }
 
 .post {
   margin: .5em 0 1.5em;
