@@ -139,7 +139,8 @@ h2 {
   line-height: 1.4em; }
 
 .date-header {
-  margin: 1.5em 0 .5em; }
+  margin: 1.5em 0 .5em;
+  /* comment here */ }
 
 .post {
   margin: .5em 0 1.5em;
