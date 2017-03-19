@@ -1,22 +1,33 @@
 var blogUtils = {};
 
+blogUtils.escapeAngleBrackets = function (character) {
+    if (character === '<') {
+        return '&lt;';
+    } else if (character === '>') {
+        return '&gt;';
+    } else {
+        return character;
+    }
+}
+
 blogUtils.replaceBacktickWithVar = function (body) {
     var closed = true;
     var output = "";
     var index = 0;
     while (index < body.length) {
-        if (body[index] === '`' && body[index + 1] === '`') {
-            output = output + "`";
+        var character = body[index];
+        if (character === '`' && body[index + 1] === '`') {
+            output += "`";
             index += 2;
         }
-        else if (body[index] === '`') {
+        else if (character === '`') {
             var varTag = closed ? '<var>' : '</var>';
-            output = output + varTag;
+            output += varTag;
             closed = !closed;
             index++;
         }
         else {
-            output = output + body[index];
+            output += blogUtils.escapeAngleBrackets(character);
             index++;
         }
     }
@@ -41,7 +52,8 @@ blogUtils.substituteBacktickWithVar = function ($elem) {
                 blogUtils.substituteBacktickWithVar($(e));
             }
         } else if (e.nodeType === 3) {
-            // text node here
+            // 3 means it is a text node. 
+            // This is a bit like a base case in recursive functions
             if (e.nodeValue.includes('`')) {
                 $(e).replaceWith(blogUtils.replaceBacktickWithVar(e.nodeValue));
             }
