@@ -91,8 +91,9 @@ blogUtils.configureMathJax = function() {
         extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
         jax: ["input/TeX", "output/HTML-CSS"],
         tex2jax: {
-            inlineMath: [ ['$<','>'], ["\\(","\\)"] ],
+            inlineMath: [ ['$[',']'], ["\\(","\\)"] ],
             displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            balanceBraces: true
         },
         "HTML-CSS": { availableFonts: ["TeX"] },
         messageStyle: "none"
