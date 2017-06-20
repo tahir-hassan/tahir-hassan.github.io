@@ -87,6 +87,16 @@ blogUtils.warnNonLabelledPosts = function() {
 };
 
 blogUtils.configureMathJax = function() {
+    window.tex2jaxProcessσ = '.tex2jax_process';
+
+    $(function() {
+        $(window.tex2jaxProcessσ).css('visibility', 'hidden');
+    });
+
+    MathJax.Hub.Register.StartupHook("End",function () {
+        $(window.tex2jaxProcessσ).css('visibility', '');
+    });
+
     // documentation: http://docs.mathjax.org/en/latest/options/tex2jax.html
     MathJax.Hub.Config({
         extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
