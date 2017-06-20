@@ -87,6 +87,7 @@ blogUtils.warnNonLabelledPosts = function() {
 };
 
 blogUtils.configureMathJax = function() {
+    // documentation: http://docs.mathjax.org/en/latest/options/tex2jax.html
     MathJax.Hub.Config({
         extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
         jax: ["input/TeX", "output/HTML-CSS"],
