@@ -174,23 +174,28 @@ h2 {
 .comment-link {
   margin-left: .6em; }
 
-.post img, table.tr-caption-container {
+.post img {
   padding: 4px;
   border: 1px solid #cccccc; }
+  .post img.bare {
+    padding: 0;
+    border: 0; }
+  .post img.char {
+    padding: 0;
+    border: 0;
+    height: 1em; }
 
-.post img.bare {
-  padding: 0;
-  border: 0; }
-
-.tr-caption-container img {
-  border: none;
-  padding: 0; }
+.tr-caption-container {
+  padding: 4px;
+  border: 1px solid #cccccc; }
+  .tr-caption-container img {
+    border: none;
+    padding: 0; }
 
 .post blockquote {
   margin: 1em 20px; }
-
-.post blockquote p {
-  margin: .75em 0; }
+  .post blockquote p {
+    margin: .75em 0; }
 
 /* Comments
 ----------------------------------------------- */

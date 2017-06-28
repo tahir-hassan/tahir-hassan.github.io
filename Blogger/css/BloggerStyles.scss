@@ -243,25 +243,44 @@ h2 {
 .comment-link {
   margin-#{$startSide}:.6em;
 }
-.post img, table.tr-caption-container {
+
+.post {
+  img {
+    padding:4px;
+    border:1px solid $bordercolor;
+
+    @mixin bare {
+      padding: 0;
+      border: 0;
+    }
+
+    &.bare {
+      @include bare();
+    }
+
+    &.char {
+      @include bare();
+      height: 1em;
+    }
+  }
+}
+
+.tr-caption-container {
   padding:4px;
   border:1px solid $bordercolor;
+
+  img {
+    border: none;
+    padding: 0;
+  }
 }
 
-.post img.bare {
-  padding: 0;
-  border: 0;
-}
-
-.tr-caption-container img {
-  border: none;
-  padding: 0;
-}
 .post blockquote {
   margin:1em 20px;
-}
-.post blockquote p {
-  margin:.75em 0;
+
+  p {
+    margin:.75em 0;
+  }
 }
 
 /* Comments
