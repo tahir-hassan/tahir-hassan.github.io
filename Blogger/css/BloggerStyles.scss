@@ -247,6 +247,12 @@ h2 {
   padding:4px;
   border:1px solid $bordercolor;
 }
+
+.post img.bare {
+  padding: 0;
+  border: 0;
+}
+
 .tr-caption-container img {
   border: none;
   padding: 0;
