@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="176.06953mm"
+   height="202.17877mm"
+   viewBox="0 0 176.06953 202.17877"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="step2 of parking.svg">
+   sodipodi:docname="Step2.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="45.369144"
-     inkscape:cy="472.57889"
+     inkscape:cx="-26.121292"
+     inkscape:cy="414.40516"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -37,7 +37,11 @@
      inkscape:window-height="971"
      inkscape:window-x="-8"
      inkscape:window-y="-11"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1"
+     fit-margin-top="2"
+     fit-margin-left="2"
+     fit-margin-bottom="2"
+     fit-margin-right="2" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -53,7 +57,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-18.915178,-49.191334)">
     <rect
        id="rect10"
        width="36.285713"
@@ -157,7 +162,7 @@
            height="79.802048"
            x="117.68277"
            y="527.03473" /></flowRegion><flowPara
-         id="flowPara2680"></flowPara></flowRoot>    <text
+         id="flowPara2680" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="112.18557"

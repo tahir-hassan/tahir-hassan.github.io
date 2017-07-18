@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="193.40152mm"
+   height="198.87953mm"
+   viewBox="0 0 193.40152 198.87953"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="step1 of parking.svg">
+   sodipodi:docname="Step1.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,25 +26,29 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="433.71487"
-     inkscape:cy="577.04279"
+     inkscape:cx="400.33812"
+     inkscape:cy="436.56049"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1680"
-     inkscape:window-height="971"
-     inkscape:window-x="-8"
-     inkscape:window-y="-11"
-     inkscape:window-maximized="0">
+     inkscape:window-width="1366"
+     inkscape:window-height="739"
+     inkscape:window-x="1671"
+     inkscape:window-y="273"
+     inkscape:window-maximized="1"
+     fit-margin-top="2"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="2">
     <sodipodi:guide
-       position="10.772321,184.35789"
+       position="1.9413891,136.49783"
        orientation="1,0"
        id="guide6774"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="27.929665,141.25195"
+       position="19.098732,93.391894"
        orientation="1,0"
        id="guide6811"
        inkscape:locked="false" />
@@ -57,14 +61,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-8.8309326,-50.26041)">
     <rect
        id="rect10"
        width="36.285713"
@@ -237,7 +242,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot2674"
-       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
          id="flowRegion2676"><rect
            id="rect2678"
            width="246.9823"
