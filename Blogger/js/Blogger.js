@@ -42,13 +42,18 @@ blogUtils.replaceBacktickWithVar = function (body) {
 
 blogUtils.substituteBacktickWithVar_ignoreTags = ['PRE', 'CODE', 'VAR', 'SCRIPT'];
 
+blogUtils.isIgnoredElement = function(e) {
+    // e is a pre, code, var, script element, or a git gist
+    return (blogUtils.substituteBacktickWithVar_ignoreTags.indexOf(e.nodeName) !== -1) || (e.nodeName === "DIV" && e.classList.contains("gist"));
+}
+
 blogUtils.substituteBacktickWithVar = function ($elem) {
 
     $elem.contents().each(function (i, e) {
         if (e.nodeType === 1) {
             // e is an element
-            if (blogUtils.substituteBacktickWithVar_ignoreTags.indexOf(e.nodeName) === -1) {
-                // e is not a pre, code, var or script element, therefore recurse over it
+            if (!blogUtils.isIgnoredElement(e)) {
+                // e is not ignored, threfore recurse over it
                 blogUtils.substituteBacktickWithVar($(e));
             }
         } else if (e.nodeType === 3) {
