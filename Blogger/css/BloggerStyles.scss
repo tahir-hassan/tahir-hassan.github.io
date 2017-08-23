@@ -566,4 +566,19 @@ div#BloggerButton1.widget a
     font-family: Verdana,Geneva,sans-serif;
 }
 
-
+/* GitHub Gist
+----------------------------------------------- */
+.gist {
+    .gist-meta {
+        /* https://stackoverflow.com/questions/15196630/hide-text-node-in-element-but-not-children */
+        visibility: collapse;
+        
+        a {
+            visibility: visible;
+        }
+        
+        a[href="https://github.com"] {
+            display: none;
+        }
+    }
+}
