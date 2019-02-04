@@ -2,7 +2,7 @@ var blogUtils = {};
 
 blogUtils.alert = function(str) {
     if (typeof alert !== "undefined") {
-        alert(alert);
+        alert(str);
     }
 }
 
