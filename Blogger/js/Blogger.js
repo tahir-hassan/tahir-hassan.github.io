@@ -1,5 +1,17 @@
 var blogUtils = {};
 
+blogUtils.alert = function(str) {
+    if (typeof alert !== "undefined") {
+        alert(alert);
+    }
+}
+
+blogUtils.alertShown = false;
+
+blogUtils.log = function(str) {
+    console.log('\x1b[36m%s\x1b[0m', str instanceof Object ? JSON.stringify(str) : str);  //cyan
+}
+
 blogUtils.escapeAngleBrackets = function (character) {
     if (character === '<') {
         return '&lt;';
@@ -16,8 +28,17 @@ blogUtils.replaceBacktickWithVar = function (body) {
     var index = 0;
     while (index < body.length) {
         var character = body[index];
-        if (character === '`' && body[index + 1] === '`') {
+        var nextChar = body[index + 1];
+        if (character === '`' && nextChar === '`') {
             output += "`";
+            index += 2;
+        }
+        else if (character === '<' && nextChar === '\'') {
+            output += '&lt;';
+            index += 2;
+        }
+        else if (character === '\'' && nextChar === '>') {
+            output += '&gt;';
             index += 2;
         }
         else if (character === '`') {
@@ -33,8 +54,14 @@ blogUtils.replaceBacktickWithVar = function (body) {
     }
 
     if (!closed) {
-        alert('body not closed. Click ok to see body text.');
-        alert(body);
+        if (!this.alertShown) {
+            this.alert("blogUtils: Check log for backtick to <var> element, which was not closed.");
+            this.alertShown = true;
+        }
+        this.log({
+            input : body,
+            output : output
+        });
     }
 
     return output;
