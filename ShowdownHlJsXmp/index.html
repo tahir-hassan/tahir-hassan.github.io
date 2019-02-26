@@ -58,19 +58,19 @@ function helloworld() {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
     <script>
-    // function run() {
-    // var text = document.getElementById('sourceXmp').value,
-    //     target = document.getElementById('targetDiv'),
-    //     converter = new showdown.Converter(),
-    //     html = converter.makeHtml(text);
+    function run() {
+    var text = document.getElementById('sourceXmp').innerText,
+        target = document.getElementById('targetDiv'),
+        converter = new showdown.Converter(),
+        html = converter.makeHtml(text);
         
-    //     target.innerHTML = html;
+        target.innerHTML = html;
 
-    //     document.querySelectorAll('#targetDiv pre code').forEach((block) => {
-    //         console.log('applied');
-    //         hljs.highlightBlock(block);
-    //     });
-    // }
+        document.querySelectorAll('#targetDiv pre code').forEach((block) => {
+            console.log('applied');
+            hljs.highlightBlock(block);
+        });
+    }
     </script>
 </body>
 </html>
