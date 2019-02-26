@@ -48,6 +48,8 @@ function helloworld() {
     <script>
     function processShowdownXmps() {
         var showdownConverter = new showdown.Converter();
+        showdownConverter.setFlavor('github');
+        
         document.querySelectorAll('xmp.showdown').forEach((xmp) => {
             var text = xmp.innerText;
             var html = showdownConverter.makeHtml(text);
