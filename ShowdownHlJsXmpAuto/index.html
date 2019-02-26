@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Showdown and Highlight JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css" />
+    <style>
+    #sourceTA {
+        display: block;
+    }
+    #targetDiv {
+    border: 1px dashed #333333;
+    width: 600px;
+    height: 400px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Showdown and Highlight JS</h1>
+
+    <p>This page is to test these two technologies working in sync.</p>
+
+    <h2>Example</h2>
+    <xmp id="sourceXmp">tahir 
+
+```xml
+
+<tahir>
+
+<b>aldslfdsaj</b>
+</tahir>
+```
+
+```xml
+
+<tahir>
+
+<b>aldslfdsaj</b>
+</tahir>
+<script>
+var hello = "trhir";
+</script>
+```
+
+```js
+function helloworld() {
+    if (true) {
+
+    }
+}
+```</xmp>
+    <hr/>
+    <button id="runBtn" onClick="run()">Convert</button>
+    <hr/>
+    <div id="targetDiv"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+    <script>
+    function run() {
+    var text = document.getElementById('sourceXmp').innerText,
+        target = document.getElementById('targetDiv'),
+        converter = new showdown.Converter(),
+        html = converter.makeHtml(text);
+        
+        target.innerHTML = html;
+
+        document.querySelectorAll('#targetDiv pre code').forEach((block) => {
+            console.log('applied');
+            hljs.highlightBlock(block);
+        });
+    }
+    </script>
+</body>
+</html>
