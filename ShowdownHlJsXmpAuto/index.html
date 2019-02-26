@@ -53,10 +53,15 @@ function helloworld() {
             var html = showdownConverter.makeHtml(text);
             var div = document.createElement('div');
             div.innerHTML = html;
-            xmp.parentNode.insertBefore(div, xmp.nextSibling);
             div.querySelectorAll('pre code').forEach((block) => {
                 hljs.highlightBlock(block);
             });
+
+            xmp.parentNode.insertBefore(div, xmp.nextSibling);
+            console.log('new 26/02/2019 16:19');
+            // div.querySelectorAll('pre code').forEach((block) => {
+            //     hljs.highlightBlock(block);
+            // });
         });
     }
 
