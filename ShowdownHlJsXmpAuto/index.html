@@ -14,6 +14,10 @@
     width: 600px;
     height: 400px;
     }
+
+    .showdown.hide {
+        display: none;
+    }
     </style>
 </head>
 <body>
@@ -22,7 +26,7 @@
     <p>This page is to test these two technologies working in sync.</p>
 
     <h2>Example</h2>
-    <xmp id="sourceXmp">tahir 
+    <xmp class="showdown">tahir 
 
 ```xml
 
@@ -52,23 +56,21 @@ function helloworld() {
 ```</xmp>
     <hr/>
     <button id="runBtn" onClick="run()">Convert</button>
-    <hr/>
-    <div id="targetDiv"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
     <script>
     function run() {
-    var text = document.getElementById('sourceXmp').innerText,
-        target = document.getElementById('targetDiv'),
-        converter = new showdown.Converter(),
-        html = converter.makeHtml(text);
-        
-        target.innerHTML = html;
-
-        document.querySelectorAll('#targetDiv pre code').forEach((block) => {
-            console.log('applied');
-            hljs.highlightBlock(block);
+        var showdownConverter = new showdown.Converter();
+        document.querySelectorAll('xmp.showdown').forEach((xmp) => {
+            var text = xmp.innerText;
+            var html = showdownConverter.makeHtml(text);
+            var div = document.createElement('div');
+            div.innerText = html;
+            xmp.parentNode.insertBefore(div, xmp.nextSibling);
+            div.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
         });
     }
     </script>
