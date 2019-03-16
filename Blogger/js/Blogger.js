@@ -96,16 +96,19 @@ blogUtils.substituteBacktickWithVar = function ($elem) {
 blogUtils.highlightPreCode = function() {
     $('pre code').each(function (i, e) {
         var $e = $(e);
-        $e.text($e.text().trim());
-        hljs.highlightBlock(e);
-        
-        [ $e, $e.parent() ].forEach(function($elem) {
-            if ($elem[0].hasAttribute('height')) {
-                $elem.css('max-height', $elem.attr('height'));
-                $elem.css('overflow-y', 'auto');
-                $elem.removeAttr('height');
-            }
-        });
+
+        if ($e.parents('div.showdown').length === 0) {
+            $e.text($e.text().trim());
+            hljs.highlightBlock(e);
+            
+            [ $e, $e.parent() ].forEach(function($elem) {
+                if ($elem[0].hasAttribute('height')) {
+                    $elem.css('max-height', $elem.attr('height'));
+                    $elem.css('overflow-y', 'auto');
+                    $elem.removeAttr('height');
+                }
+            });
+        }
     });
 };
 
@@ -115,6 +118,24 @@ blogUtils.warnNonLabelledPosts = function() {
             $(this).addClass('no-labels');
             $(this).find('.post-title').append("<span style='color: red; font-size: large; font-weight: bold'>NO LABELS!!! NO LABELS!!!</span>");
         }
+    });
+};
+
+blogUtils.processShowdownXmps = function() {
+    var showdownConverter = new showdown.Converter();
+    showdownConverter.setFlavor('github');
+
+    document.querySelectorAll('xmp.showdown').forEach((xmp) => {
+        var text = xmp.innerText;
+        var html = showdownConverter.makeHtml(text);
+        var div = document.createElement('div');
+        div.classList.add('showdown');
+        div.innerHTML = html;
+        div.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+        xmp.parentNode.insertBefore(div, xmp.nextSibling);
+        xmp.style.display = 'none';
     });
 };
 
