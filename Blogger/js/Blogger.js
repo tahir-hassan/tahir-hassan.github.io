@@ -117,7 +117,7 @@ blogUtils.warnNonLabelledPosts = function() {
         if ($.trim($(this).find('span.post-labels').text()).length == 0) {
             $(this).addClass('no-labels');
             $(this).find('.post-title').append("<span style='color: red; font-size: large; font-weight: bold'>NO LABELS!!! NO LABELS!!!</span>");
-        }
+        } 
     });
 };
 
