@@ -126,7 +126,7 @@ blogUtils.processShowdownXmps = function() {
     showdownConverter.setFlavor('github');
 
     document.querySelectorAll('xmp.showdown').forEach((xmp) => {
-        var text = xmp.innerText;
+        var text = xmp.innerHTML;
         var html = showdownConverter.makeHtml(text);
         var div = document.createElement('div');
         div.classList.add('showdown');
