@@ -1,79 +1,81 @@
-if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
-}
+alert('tahir');
 
-(function() {
-    function replaceAllWhitespaceWithSpace(str) {
-        return str.replace(/[\t\v\f\u00a0\u2000-\u200b\u2028-\u2029\u3000]/g, ' ');
-    }
+// if (window.NodeList && !NodeList.prototype.forEach) {
+    // NodeList.prototype.forEach = function (callback, thisArg) {
+        // thisArg = thisArg || window;
+        // for (var i = 0; i < this.length; i++) {
+            // callback.call(thisArg, this[i], i, this);
+        // }
+    // };
+// }
 
-    function addStylesheet(src) {
-        var s = document.createElement('link');
-        s.rel = 'stylesheet';
-        s.href = src;
-        document.head.appendChild(s);
-    }
+// (function() {
+    // function replaceAllWhitespaceWithSpace(str) {
+        // return str.replace(/[\t\v\f\u00a0\u2000-\u200b\u2028-\u2029\u3000]/g, ' ');
+    // }
 
-    function addScript(src, callback){
-        if (src === undefined || src === null) {
-            throw "src parameter not supplied";
-        }
+    // function addStylesheet(src) {
+        // var s = document.createElement('link');
+        // s.rel = 'stylesheet';
+        // s.href = src;
+        // document.head.appendChild(s);
+    // }
+
+    // function addScript(src, callback){
+        // if (src === undefined || src === null) {
+            // throw "src parameter not supplied";
+        // }
         
-        var script = document.body.querySelector('script[src="' + src + '"]');
-        if (script == null)
-        {
-          script = document.createElement('script');
-          script.type = "text/javascript";
-          script.src = src;
-          document.body.appendChild(script);
-        }
+        // var script = document.body.querySelector('script[src="' + src + '"]');
+        // if (script == null)
+        // {
+          // script = document.createElement('script');
+          // script.type = "text/javascript";
+          // script.src = src;
+          // document.body.appendChild(script);
+        // }
         
-        if (callback !== undefined && callback !== null) {
-            script.addEventListener('load', callback);    
-        }
-    }
+        // if (callback !== undefined && callback !== null) {
+            // script.addEventListener('load', callback);    
+        // }
+    // }
     
-    function addScripts(scriptSrcs, callback)
-    {
-        if (scriptSrcs === undefined || scriptSrcs  === null) {
-            throw "scriptSrcs parameter not supplied";
-        } else if (scriptSrcs.length === 0) {
-            throw "scriptSrcs parameter has no elements";
-        } else if (scriptSrcs.length === 1) {
-            addScript(scriptSrcs[0], callback);
-        } else if (scriptSrcs.length > 1) {
-            addScript(scriptSrcs[0]);
-            addScripts(scriptSrcs.slice(1), callback);
-        }
-    }
+    // function addScripts(scriptSrcs, callback)
+    // {
+        // if (scriptSrcs === undefined || scriptSrcs  === null) {
+            // throw "scriptSrcs parameter not supplied";
+        // } else if (scriptSrcs.length === 0) {
+            // throw "scriptSrcs parameter has no elements";
+        // } else if (scriptSrcs.length === 1) {
+            // addScript(scriptSrcs[0], callback);
+        // } else if (scriptSrcs.length > 1) {
+            // addScript(scriptSrcs[0]);
+            // addScripts(scriptSrcs.slice(1), callback);
+        // }
+    // }
     
-    function processShowdownDivs() {
-        var showdownConverter = new showdown.Converter();
-        showdownConverter.setFlavor('github');
+    // function processShowdownDivs() {
+        // var showdownConverter = new showdown.Converter();
+        // showdownConverter.setFlavor('github');
         
-        document.querySelectorAll('div.markdown').forEach(function(div) {
-            var text = replaceAllWhitespaceWithSpace(div.innerText);
-            var html = showdownConverter.makeHtml(text);
-            var newDiv = document.createElement('div');
-            newDiv.innerHTML = html;
-            newDiv.querySelectorAll('pre code').forEach(function(block) {
-                hljs.highlightBlock(block);
-            });
-            div.parentNode.insertBefore(newDiv, div.nextSibling);
-            div.style.display = 'none';
-        });
-    }
+        // document.querySelectorAll('div.markdown').forEach(function(div) {
+            // var text = replaceAllWhitespaceWithSpace(div.innerText);
+            // var html = showdownConverter.makeHtml(text);
+            // var newDiv = document.createElement('div');
+            // newDiv.innerHTML = html;
+            // newDiv.querySelectorAll('pre code').forEach(function(block) {
+                // hljs.highlightBlock(block);
+            // });
+            // div.parentNode.insertBefore(newDiv, div.nextSibling);
+            // div.style.display = 'none';
+        // });
+    // }
     
-    addStylesheet('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css');
-    addScripts(['https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js'], function() {
-        processShowdownDivs();
-    });
-})();
+    // addStylesheet('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css');
+    // addScripts(['https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js'], function() {
+        // processShowdownDivs();
+    // });
+// })();
 
 
 
