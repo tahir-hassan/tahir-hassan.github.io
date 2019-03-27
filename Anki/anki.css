@@ -1,0 +1,12 @@
+.markdown-container {
+    overflow-x: hidden;
+}
+
+.markdown-container.done {
+    overflow-x: auto;
+}
+
+div.markdown {
+    margin-left: 3000px;
+}
+
