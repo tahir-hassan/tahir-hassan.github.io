@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>React Require AMD</title>
+    </head>
+    <body>
+        <!-- container for rendered React element -->
+        <div id="root"></div>
+
+        <!-- include require js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
+        <!-- configuration for require js -->
+        <script src="scripts/requireConfig.js"></script>
+        <script>
+            require(['hello']);
+        </script>
+    </body>
+</html>
