@@ -20,7 +20,7 @@ define(["require", "exports", "react"], function (require, exports, React) {
             return _super !== null && _super.apply(this, arguments) || this;
         }
         Hello.prototype.render = function () {
-            return (React.createElement("p", null, "Hello, React Require AMD (tsx)!!"));
+            return (React.createElement("p", null, this.props.message));
         };
         return Hello;
     }(React.Component));

@@ -1,9 +1,13 @@
 import * as React from "react";
 
-export default class Hello extends React.Component {
+interface IHelloProps {
+    message: string
+}
+
+export default class Hello extends React.Component<IHelloProps> {
     render() {
         return (
-            <p>Hello, React Require AMD (tsx)!!</p>
+            <p>{this.props.message}</p>
         );
     }
 }

@@ -17,12 +17,17 @@ define(["require", "exports", "react", "./Hello"], function (require, exports, R
     var App = /** @class */ (function (_super) {
         __extends(App, _super);
         function App() {
-            return _super !== null && _super.apply(this, arguments) || this;
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            _this.state = {
+                title: 'My App',
+                helloMessage: 'Hello, React Require AMD (tsx)!!!'
+            };
+            return _this;
         }
         App.prototype.render = function () {
             return (React.createElement("div", null,
-                React.createElement("h1", null, "App"),
-                React.createElement(Hello_1.default, null)));
+                React.createElement("h1", null, this.state.title),
+                React.createElement(Hello_1.default, { message: this.state.helloMessage })));
         };
         return App;
     }(React.Component));
