@@ -1,0 +1,17 @@
+<!--DOCTYPE html--> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>React Require AMD!</title>
+    </head>
+    <body>
+        <!-- container for rendered React element -->
+        <div id="root"></div>
+
+        <!-- include require js and set it to load the configuration file -->
+        <script data-main="dist/RequireConfig" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
+        <script>
+            require(['Index']);
+        </script>
+    </body>
+</html>
