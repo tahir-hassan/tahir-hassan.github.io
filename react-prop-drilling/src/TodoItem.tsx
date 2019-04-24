@@ -4,6 +4,7 @@ import TodoItemDto from './ITodoItemDto';
 interface ITodoItemProps {
     todo: TodoItemDto;
     markComplete: () => void;
+    deleteItem: () => void;
 }
 
 export default class TodoItem extends React.Component<ITodoItemProps> {
@@ -20,6 +21,7 @@ export default class TodoItem extends React.Component<ITodoItemProps> {
             <div>
                 <input type="checkbox" onChange={this.props.markComplete} />
                 <span style={this.getTitleStyle()}>{title}</span>
+                <button onClick={this.props.deleteItem}>Delete</button>
             </div>
         );
     }

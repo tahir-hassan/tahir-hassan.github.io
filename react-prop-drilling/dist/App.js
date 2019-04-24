@@ -21,11 +21,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-define(["require", "exports", "react", "./Todos"], function (require, exports, React, Todos_1) {
+define(["require", "exports", "react", "./Todos", "./Welcome"], function (require, exports, React, Todos_1, Welcome_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     React = __importStar(React);
     Todos_1 = __importDefault(Todos_1);
+    Welcome_1 = __importDefault(Welcome_1);
     var App = /** @class */ (function (_super) {
         __extends(App, _super);
         function App() {
@@ -53,10 +54,16 @@ define(["require", "exports", "react", "./Todos"], function (require, exports, R
                 _this.state.todos.filter(function (x) { return x.id === id; }).forEach(function (x) { x.completed = !x.completed; });
                 _this.setState(_this.state);
             };
+            _this.deleteItem = function (id) {
+                var todos = _this.state.todos.filter(function (x) { return x.id !== id; });
+                _this.setState({ todos: todos });
+            };
             return _this;
         }
         App.prototype.render = function () {
-            return (React.createElement(Todos_1.default, { todos: this.state.todos, markComplete: this.markComplete }));
+            return (React.createElement("div", null,
+                React.createElement(Welcome_1.default, { namer: "Tahir Hassaneroo" }),
+                React.createElement(Todos_1.default, { todos: this.state.todos, markComplete: this.markComplete, deleteItem: this.deleteItem })));
         };
         return App;
     }(React.Component));

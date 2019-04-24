@@ -36,7 +36,8 @@ define(["require", "exports", "react"], function (require, exports, React) {
             var _a = this.props.todo, id = _a.id, title = _a.title;
             return (React.createElement("div", null,
                 React.createElement("input", { type: "checkbox", onChange: this.props.markComplete }),
-                React.createElement("span", { style: this.getTitleStyle() }, title)));
+                React.createElement("span", { style: this.getTitleStyle() }, title),
+                React.createElement("button", { onClick: this.props.deleteItem }, "Delete")));
         };
         return TodoItem;
     }(React.Component));

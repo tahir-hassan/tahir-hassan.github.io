@@ -3,7 +3,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 ReactDOM.render(
-    React.createElement('p', {}, 'Hello, React Require AMD!'),
+    <p>Hello, React Require AMD (tsx)!</p>,
     document.getElementById('root')
 );
 

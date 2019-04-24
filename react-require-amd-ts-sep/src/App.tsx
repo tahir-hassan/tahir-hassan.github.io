@@ -7,10 +7,15 @@ export default class App extends React.Component {
         helloMessage: 'Hello, React Require AMD (tsx)!!!'
     };
 
+    props = {
+        team: 'mercury'
+    }
+
     render() {
         return (
             <div>
-                <h1>{this.state.title}</h1>
+                <h1>{this.props.team}</h1>
+                <h1 style={{ backgroundColor: 'grey', border: '1px solid red' }}>{this.state.title}</h1>
                 <Hello message={this.state.helloMessage} />
             </div>
         );

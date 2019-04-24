@@ -33,7 +33,7 @@ define(["require", "exports", "react", "./TodoItem"], function (require, exports
         }
         Todos.prototype.render = function () {
             var _this = this;
-            var items = this.props.todos.map(function (todo) { return (React.createElement(TodoItem_1.default, { key: todo.id, todo: todo, markComplete: function () { return _this.props.markComplete(todo.id); } })); });
+            var items = this.props.todos.map(function (todo) { return (React.createElement(TodoItem_1.default, { key: todo.id, todo: todo, markComplete: function () { return _this.props.markComplete(todo.id); }, deleteItem: function () { return _this.props.deleteItem(todo.id); } })); });
             return React.createElement("div", null, items);
         };
         return Todos;

@@ -26,7 +26,7 @@ define(["require", "exports", "react", "./Hello"], function (require, exports, R
         }
         App.prototype.render = function () {
             return (React.createElement("div", null,
-                React.createElement("h1", null, this.state.title),
+                React.createElement("h1", { style: { backgroundColor: 'grey', border: '1px solid red' } }, this.state.title),
                 React.createElement(Hello_1.default, { message: this.state.helloMessage })));
         };
         return App;
