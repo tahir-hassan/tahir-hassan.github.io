@@ -35,41 +35,51 @@ body {
   color: #333333;
   font-family: Georgia Serif;
   font-size: 1.4rem;
-  text-align: center; }
+  text-align: center;
+}
 
 /* these styles have to be on both the body and html tags */
 body, html {
   max-width: 960px;
   margin: 0 auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 /* this code is necessary for highlight js to render properly. */
 .hljs, pre code {
   white-space: pre;
-  overflow-x: auto; }
+  overflow-x: auto;
+}
 
 .hljs, pre code, var {
   font-family: Consolas, monospace !important;
-  font-size: 90% !important; }
+  font-size: 90% !important;
+}
 
 /* MOBILE STYLES */
 @media (max-width: 640px) {
   .hljs, pre code, var {
-    font-size: 75% !important; } }
+    font-size: 75% !important;
+  }
+}
 a:link {
   color: #5588aa;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:visited {
   color: #999999;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:hover {
   color: #cc6600;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 a img {
-  border-width: 0; }
+  border-width: 0;
+}
 
 /* Header
 -----------------------------------------------
@@ -81,44 +91,53 @@ a img {
   border: 3px double #B7B7B7;
   font-variant: small-caps;
   color: #6B6B6B;
-  letter-spacing: 0.25em; }
+  letter-spacing: 0.25em;
+}
 
 /* Outer-Wrapper
 ----------------------------------------------- */
 #outer-wrapper {
   text-align: left;
   padding: 10px;
-  font: normal normal 100% Georgia, Serif; }
+  font: normal normal 100% Georgia, Serif;
+}
 
 #main-sidebar-wrapper {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+}
 
 @media (max-width: 640px) {
   #main-sidebar-wrapper {
-    flex-direction: column; } }
+    flex-direction: column;
+  }
+}
 #main-wrapper, #sidebar-wrapper {
   word-wrap: break-word;
   /* fix for long text breaking sidebar float in IE */
   overflow: hidden;
-  /* fix for long non-text content breaking IE sidebar float */ }
+  /* fix for long non-text content breaking IE sidebar float */
+}
 
 #main-wrapper {
   flex: 22;
-  margin-right: 1em; }
+  margin-right: 1em;
+}
 
 #sidebar-wrapper {
-  flex: 8; }
+  flex: 8;
+}
 
 /* Headings
 ----------------------------------------------- */
 h2 {
-  margin: 1.5em 0 .75em;
+  margin: 1.5em 0 0.75em;
   font: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
   line-height: 1.4em;
   text-transform: uppercase;
-  letter-spacing: .2em;
-  color: #999999; }
+  letter-spacing: 0.2em;
+  color: #999999;
+}
 
 /* Posts
 -----------------------------------------------
@@ -126,76 +145,93 @@ h2 {
 .post-footer {
   color: #999999;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
   line-height: 1.4em;
-  margin: .75em 0; }
+  margin: 0.75em 0;
+}
 
 .widget-header, .date-header {
   color: #999999;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
-  line-height: 1.4em; }
+  line-height: 1.4em;
+}
 
 .date-header {
-  margin: 1.5em 0 .5em;
-  /* comment here */ }
+  margin: 1.5em 0 0.5em;
+  /* comment here */
+}
 
 .post {
-  margin: .5em 0 1.5em;
+  margin: 0.5em 0 1.5em;
   border-bottom: 1px dotted #cccccc;
-  padding-bottom: 1.5em; }
+  padding-bottom: 1.5em;
+}
 
 .post h3 {
-  margin: .25em 0 0;
+  margin: 0.25em 0 0;
   padding: 0 0 4px;
   font-size: 140%;
   font-weight: normal;
   line-height: 1.4em;
-  color: #cc6600; }
+  color: #cc6600;
+}
 
 .post h3 a, .post h3 a:visited, .post h3 strong {
   display: block;
   text-decoration: none;
   color: #cc6600;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 .post h3 strong, .post h3 a:hover {
-  color: #333333; }
+  color: #333333;
+}
 
 .post-body {
-  margin: 0 0 .75em;
-  line-height: 1.6em; }
+  margin: 0 0 0.75em;
+  line-height: 1.6em;
+}
 
 .post-body blockquote {
-  line-height: 1.3em; }
+  line-height: 1.3em;
+}
 
 .comment-link {
-  margin-left: .6em; }
+  margin-left: 0.6em;
+}
 
 .post img {
   padding: 4px;
-  border: 1px solid #cccccc; }
-  .post img.bare {
-    padding: 0;
-    border: 0; }
-  .post img.char {
-    padding: 0;
-    border: 0;
-    height: 1em; }
+  border: 1px solid #cccccc;
+}
+.post img.bare {
+  padding: 0;
+  border: 0;
+}
+.post img.char {
+  padding: 0;
+  border: 0;
+  height: 1em;
+}
 
 .tr-caption-container {
   padding: 4px;
-  border: 1px solid #cccccc; }
-  .tr-caption-container img {
-    border: none;
-    padding: 0; }
+  border: 1px solid #cccccc;
+}
+.tr-caption-container img {
+  border: none;
+  padding: 0;
+}
 
 .post blockquote {
-  margin: 1em 20px; }
-  .post blockquote p {
-    margin: .75em 0; }
+  margin: 1em 20px;
+}
+.post blockquote p {
+  margin: 0.75em 0;
+}
 
 /* Comments
 ----------------------------------------------- */
@@ -204,92 +240,113 @@ h2 {
   font-weight: bold;
   line-height: 1.4em;
   text-transform: uppercase;
-  letter-spacing: .2em;
-  color: #999999; }
+  letter-spacing: 0.2em;
+  color: #999999;
+}
 
 #comments-block {
   margin: 1em 0 1.5em;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+}
 
 #comments-block .comment-author {
-  margin: .5em 0; }
+  margin: 0.5em 0;
+}
 
 #comments-block .comment-body {
-  margin: .25em 0 0; }
+  margin: 0.25em 0 0;
+}
 
 #comments-block .comment-footer {
-  margin: -.25em 0 2em;
+  margin: -0.25em 0 2em;
   line-height: 1.4em;
   text-transform: uppercase;
-  letter-spacing: .1em; }
+  letter-spacing: 0.1em;
+}
 
 #comments-block .comment-body p {
-  margin: 0 0 .75em; }
+  margin: 0 0 0.75em;
+}
 
 .deleted-comment {
   font-style: italic;
-  color: gray; }
+  color: gray;
+}
 
 #blog-pager-newer-link {
-  float: left; }
+  float: left;
+}
 
 #blog-pager-older-link {
-  float: right; }
+  float: right;
+}
 
 #blog-pager {
-  text-align: center; }
+  text-align: center;
+}
 
 .feed-links {
   clear: both;
-  line-height: 2.5em; }
+  line-height: 2.5em;
+}
 
 /* Sidebar Content
 ----------------------------------------------- */
 .sidebar {
   color: #666666;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+}
 
 .sidebar ul {
   list-style: none;
   margin: 0 0 0;
-  padding: 0 0 0; }
+  padding: 0 0 0;
+}
 
 .sidebar li {
   margin: 0;
   padding-top: 0;
   padding-right: 0;
-  padding-bottom: .25em;
+  padding-bottom: 0.25em;
   padding-left: 15px;
   text-indent: -15px;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+}
 
 form#custom-search-form, .sidebar .widget, .main .widget {
   border-bottom: 1px dotted #cccccc;
   margin: 0 0 1.5em;
-  padding: 0 0 1.5em; }
+  padding: 0 0 1.5em;
+}
 
 #custom-search-form-wrapper {
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 form#custom-search-form {
   margin: 0 -5px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
-  form#custom-search-form input {
-    margin: 0 5px;
-    display: block;
-    height: 1.8em;
-    box-sizing: border-box; }
-  form#custom-search-form input[type=text] {
-    flex: 2;
-    width: 100%; }
-  form#custom-search-form input[type=submit] {
-    flex: 1; }
+  justify-content: space-between;
+}
+form#custom-search-form input {
+  margin: 0 5px;
+  display: block;
+  height: 1.8em;
+  box-sizing: border-box;
+}
+form#custom-search-form input[type=text] {
+  flex: 2;
+  width: 100%;
+}
+form#custom-search-form input[type=submit] {
+  flex: 1;
+}
 
 .main .Blog {
-  border-bottom-width: 0; }
+  border-bottom-width: 0;
+}
 
 /* Profile 
 ----------------------------------------------- */
@@ -300,28 +357,33 @@ form#custom-search-form {
   margin-bottom: 5px;
   margin-left: 0;
   padding: 4px;
-  border: 1px solid #cccccc; }
+  border: 1px solid #cccccc;
+}
 
 .profile-data {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
   color: #999999;
   font-weight: bold;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+}
 
 .profile-datablock {
-  margin: .5em 0 .5em; }
+  margin: 0.5em 0 0.5em;
+}
 
 .profile-textblock {
   margin: 0.5em 0;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+}
 
 .profile-link {
   font: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
   text-transform: uppercase;
-  letter-spacing: .1em; }
+  letter-spacing: 0.1em;
+}
 
 /* Footer
 ----------------------------------------------- */
@@ -332,12 +394,14 @@ form#custom-search-form {
   padding-top: 15px;
   line-height: 1.6em;
   text-transform: uppercase;
-  letter-spacing: .1em;
-  text-align: center; }
+  letter-spacing: 0.1em;
+  text-align: center;
+}
 
 /* END OF BLOGGER b:skin tag */
 .wait-hljs, .wait-backtickvar {
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 .clearfix:after {
   content: " ";
@@ -345,85 +409,113 @@ form#custom-search-form {
   visibility: hidden;
   display: block;
   height: 0;
-  clear: both; }
+  clear: both;
+}
 
 var {
   background-color: #F8F8F8;
   border: 1px solid #f0f0f0;
   padding: 1px 3px;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
 
 div.blogger-clickTrap {
-  display: none !important; }
+  display: none !important;
+}
 
 div.post-outer.no-labels {
-  border: 1px solid red; }
+  border: 1px solid red;
+}
 
 div.post div.post-body,
 div.post div.post-body p {
-  font-family: Verdana, Geneva, sans-serif; }
+  font-family: Verdana, Geneva, sans-serif;
+}
 
 div.post div.post-body var {
   font-family: monospace;
   font-style: normal;
   font-weight: bold;
-  color: #3F3F3F; }
+  color: #3F3F3F;
+}
 
 table.tbl {
   border: 1px solid #393939;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+}
 
 table.tbl td,
 table.tbl th {
   border-bottom: 1px solid #393939;
-  padding: 5px; }
+  padding: 5px;
+}
 
 table.tbl tr:nth-child(even) td {
-  background-color: #DCEEF9; }
+  background-color: #DCEEF9;
+}
 
 table.tbl td {
-  border-left: 1px solid #393939; }
+  border-left: 1px solid #393939;
+}
 
 table.tbl th {
   border-left: 1px solid #6B6B6B;
   background-color: #003366;
   color: white;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 h4, h5 {
-  color: #CC6600; }
+  color: #CC6600;
+}
 
 .post a:visited {
-  color: #5588AA; }
+  color: #5588AA;
+}
 
 img.center {
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 ul.posts li a {
-  font-family: Verdana,Geneva,sans-serif; }
+  font-family: Verdana, Geneva, sans-serif;
+}
 
 .BlogArchive #ArchiveList {
-  font-family: Verdana, Geneva, sans-serif; }
-  .BlogArchive #ArchiveList ul.posts li {
-    list-style-type: disc;
-    list-style-position: outside;
-    text-indent: 0;
-    padding-left: 0 !important;
-    margin-left: 0.5em; }
+  font-family: Verdana, Geneva, sans-serif;
+}
+.BlogArchive #ArchiveList ul.posts li {
+  list-style-type: disc;
+  list-style-position: outside;
+  text-indent: 0;
+  padding-left: 0 !important;
+  margin-left: 0.5em;
+}
 
 div#BloggerButton1.widget a {
-  font-family: Verdana,Geneva,sans-serif; }
+  font-family: Verdana, Geneva, sans-serif;
+}
 
 /* GitHub Gist
 ----------------------------------------------- */
 .gist .gist-meta {
   /* https://stackoverflow.com/questions/15196630/hide-text-node-in-element-but-not-children */
-  visibility: collapse; }
-  .gist .gist-meta a {
-    visibility: visible; }
-  .gist .gist-meta a[href="https://github.com"] {
-    display: none; }
+  visibility: collapse;
+}
+.gist .gist-meta a {
+  visibility: visible;
+}
+.gist .gist-meta a[href="https://github.com"] {
+  display: none;
+}
+
+/* Showdown related
+----------------------------------------------- */
+div.showdown em {
+  font-style: italic;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=BloggerStyles.css.map */

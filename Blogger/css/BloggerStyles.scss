@@ -10,7 +10,7 @@ Date:     26 Feb 2004
 Updated by: Blogger Team
 ----------------------------------------------- */
 
-/* Page Background Color */ 
+/* Page Background Color */  
 $bgcolor: #ffffff; 
  
 /* Text Color */
@@ -577,4 +577,13 @@ div#BloggerButton1.widget a
             display: none;
         }
     }
+}
+
+/* Showdown related
+----------------------------------------------- */
+div.showdown {
+  em {
+    font-style: italic;
+    font-weight: bold;
+  }
 }
