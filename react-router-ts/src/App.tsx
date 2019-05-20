@@ -2,11 +2,28 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import axios from 'axios';
+import { observer } from 'mobx-react';
 
 import Navigation from './Navigation';
 
-function Home() {
-    return <p>This is home</p>
+class Home extends React.Component {
+    state = { todos : [ { key : 1, title: 'tahir' }, { key : 2, title: 'riyadh' } ] };
+
+    componentDidMount() {
+        console.log('componentDidMount');
+        axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10').then(res => this.setState({ todos: res.data }));
+    }
+
+    render() {
+        var items = this.state.todos.map((todo: any) => (
+            <p>{todo.title}</p>
+        ));
+
+        return (
+            <div>{items}</div>
+        )
+    }
 }
 
 function About() {
@@ -22,6 +39,10 @@ function Error() {
 }
 
 class App extends React.Component {
+    formSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        
+    }
+
     render() {
         return (
             <BrowserRouter>
@@ -33,6 +54,11 @@ class App extends React.Component {
                         <Route path="/contact" component={Contact} />
                         <Route component={Error} />
                     </Switch>
+                    <div>
+                        <form onSubmit={this.formSubmit}>
+
+                        </form>
+                    </div>
                 </div>
             </BrowserRouter>
         )
