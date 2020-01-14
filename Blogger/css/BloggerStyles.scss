@@ -10,9 +10,9 @@ Date:     26 Feb 2004
 Updated by: Blogger Team
 ----------------------------------------------- */
 
-/* Page Background Color */  
-$bgcolor: #ffffff; 
- 
+/* Page Background Color */
+$bgcolor: #ffffff;
+
 /* Text Color */
 $textcolor: #333333;
 
@@ -44,16 +44,16 @@ $visitedlinkcolor: #999999;
 $bodyfont: normal normal 100% Georgia, Serif;
 
 /* Sidebar Title Font */
-$headerfont: normal normal 78% 'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif;
+$headerfont: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
 
 /* Blog Title Font */
 $pagetitlefont: normal normal 200% Georgia, Serif;
 
 /* Blog Description Font */
-$descriptionfont: normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+$descriptionfont: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
 
 /* Post Footer Font */
-$postfooterfont: normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+$postfooterfont: normal normal 78% "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
 
 /* Side where text starts in blog language */
 $startSide: left;
@@ -61,7 +61,7 @@ $startSide: left;
 /* Side where text ends in blog language */
 $endSide: right;
 
-$paraFontFamily: Verdana,Geneva,sans-serif;
+$paraFontFamily: Verdana, Geneva, sans-serif;
 
 /* 
 // the following `html` style needs to be commented out when bootstrap 4 is added
@@ -71,54 +71,60 @@ html {
 */
 
 body {
-  background:$bgcolor;
-  margin:0;
-  color:$textcolor;
+  background: $bgcolor;
+  margin: 0;
+  color: $textcolor;
   font-family: Georgia Serif;
   font-size: 1.4rem;
   text-align: center;
 }
 
 /* these styles have to be on both the body and html tags */
-body, html {
+body,
+html {
   max-width: 960px;
-  margin:0 auto;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
 /* this code is necessary for highlight js to render properly. */
-.hljs, pre code {
-   white-space: pre;
-   overflow-x: auto;
+.hljs,
+pre code {
+  white-space: pre;
+  overflow-x: auto;
 }
 
-.hljs, pre code, var {
-    font-family: Consolas, monospace !important;
-    font-size: 90% !important;    
+.hljs,
+pre code,
+var {
+  font-family: Consolas, monospace !important;
+  font-size: 90% !important;
 }
 
 /* MOBILE STYLES */
 @media (max-width: $mobile-landscape-width) {
-    .hljs, pre code, var {
-       font-size: 75% !important;
-    }
+  .hljs,
+  pre code,
+  var {
+    font-size: 75% !important;
+  }
 }
 
 a:link {
-  color:$linkcolor;
-  text-decoration:none;
-  }
+  color: $linkcolor;
+  text-decoration: none;
+}
 a:visited {
-  color:$visitedlinkcolor;
-  text-decoration:none;
-  }
+  color: $visitedlinkcolor;
+  text-decoration: none;
+}
 a:hover {
-  color:$titlecolor;
-  text-decoration:underline;
+  color: $titlecolor;
+  text-decoration: underline;
 }
 a img {
-  border-width:0;
-  }
+  border-width: 0;
+}
 
 /* Header
 -----------------------------------------------
@@ -128,126 +134,129 @@ a img {
   background-position: center;
   margin-left: auto;
   margin-right: auto;
-  border: 3px double #B7B7B7;
+  border: 3px double #b7b7b7;
   font-variant: small-caps;
-  color: #6B6B6B;
+  color: #6b6b6b;
   letter-spacing: 0.25em;
 }
 
 /* Outer-Wrapper
 ----------------------------------------------- */
 #outer-wrapper {
-  text-align:$startSide;
+  text-align: $startSide;
   padding: 10px;
   font: $bodyfont;
 }
 
 #main-sidebar-wrapper {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: $mobile-landscape-width) {
-    #main-sidebar-wrapper {
-        flex-direction: column;
-    }
+  #main-sidebar-wrapper {
+    flex-direction: column;
+  }
 }
 
-#main-wrapper, #sidebar-wrapper {
-    word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
-    overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+#main-wrapper,
+#sidebar-wrapper {
+  word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+  overflow: hidden; /* fix for long non-text content breaking IE sidebar float */
 }
 
 #main-wrapper {
-    flex: 22;  
-    margin-right: 1em;
+  flex: 22;
+  margin-right: 1em;
 }
 
 #sidebar-wrapper {
-    flex: 8;
+  flex: 8;
 }
 
 /* Headings
 ----------------------------------------------- */
 
 h2 {
-  margin:1.5em 0 .75em;
-  font:$headerfont;
+  margin: 1.5em 0 0.75em;
+  font: $headerfont;
   line-height: 1.4em;
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  color:$sidebarcolor;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: $sidebarcolor;
 }
-
 
 /* Posts
 -----------------------------------------------
  */
 
 .post-footer {
-  color:$sidebarcolor;
-  text-transform:uppercase;
-  letter-spacing:.1em;
+  color: $sidebarcolor;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   font: $postfooterfont;
   line-height: 1.4em;
-  margin: .75em 0;
+  margin: 0.75em 0;
 }
 
 .widget-header {
-  color:$sidebarcolor;
-  text-transform:uppercase;
-  letter-spacing:.1em;
+  color: $sidebarcolor;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   font: $postfooterfont;
   line-height: 1.4em;
 }
 
 .date-header {
-    @extend .widget-header;
-    margin:1.5em 0 .5em; /* comment here */
+  @extend .widget-header;
+  margin: 1.5em 0 0.5em; /* comment here */
 }
 
 .post {
-  margin:.5em 0 1.5em;
-  border-bottom:1px dotted $bordercolor;
-  padding-bottom:1.5em;
-  }
+  margin: 0.5em 0 1.5em;
+  border-bottom: 1px dotted $bordercolor;
+  padding-bottom: 1.5em;
+}
 .post h3 {
-  margin:.25em 0 0;
-  padding:0 0 4px;
-  font-size:140%;
-  font-weight:normal;
-  line-height:1.4em;
-  color:$titlecolor;
+  margin: 0.25em 0 0;
+  padding: 0 0 4px;
+  font-size: 140%;
+  font-weight: normal;
+  line-height: 1.4em;
+  color: $titlecolor;
 }
 
-.post h3 a, .post h3 a:visited, .post h3 strong {
-  display:block;
-  text-decoration:none;
-  color:$titlecolor;
-  font-weight:normal;
+.post h3 a,
+.post h3 a:visited,
+.post h3 strong {
+  display: block;
+  text-decoration: none;
+  color: $titlecolor;
+  font-weight: normal;
 }
 
-.post h3 strong, .post h3 a:hover {
-  color:$textcolor;
+.post h3 strong,
+.post h3 a:hover {
+  color: $textcolor;
 }
 
 .post-body {
-  margin:0 0 .75em;
-  line-height:1.6em;
+  margin: 0 0 0.75em;
+  line-height: 1.6em;
 }
 
 .post-body blockquote {
-  line-height:1.3em;  
+  line-height: 1.3em;
 }
 
 .comment-link {
-  margin-#{$startSide}:.6em;
+  margin-#{$startSide}: 0.6em;
 }
 
 .post {
   img {
-    padding:4px;
-    border:1px solid $bordercolor;
+    padding: 4px;
+    border: 1px solid $bordercolor;
 
     @mixin bare {
       padding: 0;
@@ -263,11 +272,17 @@ h2 {
       height: 1em;
     }
   }
+
+  img.dataImage {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .tr-caption-container {
-  padding:4px;
-  border:1px solid $bordercolor;
+  padding: 4px;
+  border: 1px solid $bordercolor;
 
   img {
     border: none;
@@ -276,59 +291,59 @@ h2 {
 }
 
 .post blockquote {
-  margin:1em 20px;
+  margin: 1em 20px;
 
   p {
-    margin:.75em 0;
+    margin: 0.75em 0;
   }
 }
 
 /* Comments
 ----------------------------------------------- */
 #comments h4 {
-  margin:1em 0;
+  margin: 1em 0;
   font-weight: bold;
   line-height: 1.4em;
-  text-transform:uppercase;
-  letter-spacing:.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   color: $sidebarcolor;
-  }
+}
 
 #comments-block {
-  margin:1em 0 1.5em;
-  line-height:1.6em;
-  }
+  margin: 1em 0 1.5em;
+  line-height: 1.6em;
+}
 #comments-block .comment-author {
-  margin:.5em 0;
-  }
+  margin: 0.5em 0;
+}
 #comments-block .comment-body {
-  margin:.25em 0 0;
-  }
+  margin: 0.25em 0 0;
+}
 #comments-block .comment-footer {
-  margin:-.25em 0 2em;
+  margin: -0.25em 0 2em;
   line-height: 1.4em;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  }
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
 #comments-block .comment-body p {
-  margin:0 0 .75em;
-  }
+  margin: 0 0 0.75em;
+}
 .deleted-comment {
-  font-style:italic;
-  color:gray;
-  }
+  font-style: italic;
+  color: gray;
+}
 
 #blog-pager-newer-link {
   float: $startSide;
- }
- 
+}
+
 #blog-pager-older-link {
   float: $endSide;
- }
+}
 
-#blog-pager { 
+#blog-pager {
   text-align: center;
- }
+}
 
 .feed-links {
   clear: both;
@@ -337,70 +352,69 @@ h2 {
 
 /* Sidebar Content
 ----------------------------------------------- */
-.sidebar { 
+.sidebar {
   color: $sidebartextcolor;
   line-height: 1.5em;
- }
+}
 
 .sidebar ul {
-  list-style:none;
-  margin:0 0 0;
-  padding:0 0 0;
+  list-style: none;
+  margin: 0 0 0;
+  padding: 0 0 0;
 }
 .sidebar li {
-  margin:0;
-  padding-top:0;
+  margin: 0;
+  padding-top: 0;
   padding-#{$endSide}: 0;
-  padding-bottom:.25em;
-  padding-#{$startSide}:15px;
-  text-indent:-15px;
-  line-height:1.5em;
-  }
-  
-  
+  padding-bottom: 0.25em;
+  padding-#{$startSide}: 15px;
+  text-indent: -15px;
+  line-height: 1.5em;
+}
 
-form#custom-search-form, .sidebar .widget, .main .widget { 
-  border-bottom:1px dotted $bordercolor;
-  margin:0 0 1.5em;
-  padding:0 0 1.5em;
- }
+form#custom-search-form,
+.sidebar .widget,
+.main .widget {
+  border-bottom: 1px dotted $bordercolor;
+  margin: 0 0 1.5em;
+  padding: 0 0 1.5em;
+}
 
 #custom-search-form-wrapper {
-    margin-top: 1em;
-    margin-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 form#custom-search-form {
-    margin: 0 -5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  margin: 0 -5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    input {
-        margin: 0 5px;
-        display: block;
-        height: 1.8em;
-        box-sizing: border-box;
-    }
+  input {
+    margin: 0 5px;
+    display: block;
+    height: 1.8em;
+    box-sizing: border-box;
+  }
 
-    input[type=text] {
-        flex: 2;
-        width: 100%;
-    }
+  input[type="text"] {
+    flex: 2;
+    width: 100%;
+  }
 
-    input[type=submit] {
-        flex: 1;
-    }
+  input[type="submit"] {
+    flex: 1;
+  }
 }
 
-.main .Blog { 
+.main .Blog {
   border-bottom-width: 0;
 }
 
-
 /* Profile 
 ----------------------------------------------- */
-.profile-img { 
+.profile-img {
   float: $startSide;
   margin-top: 0;
   margin-#{$endSide}: 5px;
@@ -411,172 +425,160 @@ form#custom-search-form {
 }
 
 .profile-data {
-  margin:0;
-  text-transform:uppercase;
-  letter-spacing:.1em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   font: $postfooterfont;
   color: $sidebarcolor;
   font-weight: bold;
   line-height: 1.6em;
 }
 
-.profile-datablock { 
-  margin:.5em 0 .5em;
+.profile-datablock {
+  margin: 0.5em 0 0.5em;
 }
 
-.profile-textblock { 
+.profile-textblock {
   margin: 0.5em 0;
   line-height: 1.6em;
 }
 
-.profile-link { 
+.profile-link {
   font: $postfooterfont;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 /* Footer
 ----------------------------------------------- */
 #footer {
-  width:660px;
-  clear:both;
-  margin:0 auto;
-  padding-top:15px;
+  width: 660px;
+  clear: both;
+  margin: 0 auto;
+  padding-top: 15px;
   line-height: 1.6em;
-  text-transform:uppercase;
-  letter-spacing:.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   text-align: center;
-} 
+}
 
 /* END OF BLOGGER b:skin tag */
 
-.wait-hljs, .wait-backtickvar {
-    visibility: hidden;
+.wait-hljs,
+.wait-backtickvar {
+  visibility: hidden;
 }
-    
+
 .clearfix:after {
-    content: " "; /* Older browser do not support empty content */
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 var {
-    background-color: #F8F8F8;
-    border: 1px solid #f0f0f0;
-    padding: 1px 3px;
-    border-radius: 3px;
+  background-color: #f8f8f8;
+  border: 1px solid #f0f0f0;
+  padding: 1px 3px;
+  border-radius: 3px;
 }
 
 div.blogger-clickTrap {
-    display: none !important;
+  display: none !important;
 }
-div.post-outer.no-labels
-{
-    border: 1px solid red;
+div.post-outer.no-labels {
+  border: 1px solid red;
 }
 
 div.post div.post-body,
-div.post div.post-body p
-{
-    font-family: $paraFontFamily;
+div.post div.post-body p {
+  font-family: $paraFontFamily;
 }
 
-div.post div.post-body var
-{
-    font-family: monospace;
-    font-style: normal;
-    font-weight: bold;
-    color: #3F3F3F;
+div.post div.post-body var {
+  font-family: monospace;
+  font-style: normal;
+  font-weight: bold;
+  color: #3f3f3f;
 }
-   
-table.tbl
-{
-    border: 1px solid #393939;
-    border-collapse:collapse;
+
+table.tbl {
+  border: 1px solid #393939;
+  border-collapse: collapse;
 }
 
 table.tbl td,
-table.tbl th
-{
-    border-bottom: 1px solid #393939;
-    padding: 5px;
+table.tbl th {
+  border-bottom: 1px solid #393939;
+  padding: 5px;
 }
 
-table.tbl tr:nth-child(even) td
-{
-    background-color: #DCEEF9;
-}
-    
-table.tbl td
-{
-    border-left: 1px solid #393939;
-}
-    
-table.tbl th 
-{
-    border-left: 1px solid #6B6B6B;
-    background-color: #003366;
-    color: white;
-    font-weight: bold;
+table.tbl tr:nth-child(even) td {
+  background-color: #dceef9;
 }
 
-h4, h5
-{
-    color: #CC6600
+table.tbl td {
+  border-left: 1px solid #393939;
 }
 
-.post a:visited
-{
-    color: #5588AA;
-}
-    
-img.center 
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+table.tbl th {
+  border-left: 1px solid #6b6b6b;
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
 }
 
-ul.posts li a
-{
-    font-family: Verdana,Geneva,sans-serif;
+h4,
+h5 {
+  color: #cc6600;
 }
-    
-.BlogArchive #ArchiveList 
-{
-    font-family: $paraFontFamily;
 
-    ul.posts li {
-        list-style-type: disc;
-        list-style-position: outside;
-        text-indent: 0;
-        padding-left: 0 !important;
-        margin-left: 0.5em;
-    }
+.post a:visited {
+  color: #5588aa;
 }
-    
-div#BloggerButton1.widget a
-{
-    font-family: Verdana,Geneva,sans-serif;
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul.posts li a {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.BlogArchive #ArchiveList {
+  font-family: $paraFontFamily;
+
+  ul.posts li {
+    list-style-type: disc;
+    list-style-position: outside;
+    text-indent: 0;
+    padding-left: 0 !important;
+    margin-left: 0.5em;
+  }
+}
+
+div#BloggerButton1.widget a {
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 /* GitHub Gist
 ----------------------------------------------- */
 .gist {
-    .gist-meta {
-        /* https://stackoverflow.com/questions/15196630/hide-text-node-in-element-but-not-children */
-        visibility: collapse;
-        
-        a {
-            visibility: visible;
-        }
-        
-        a[href="https://github.com"] {
-            display: none;
-        }
+  .gist-meta {
+    /* https://stackoverflow.com/questions/15196630/hide-text-node-in-element-but-not-children */
+    visibility: collapse;
+
+    a {
+      visibility: visible;
     }
+
+    a[href="https://github.com"] {
+      display: none;
+    }
+  }
 }
 
 /* Showdown related

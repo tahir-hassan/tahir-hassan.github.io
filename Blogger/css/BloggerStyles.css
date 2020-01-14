@@ -39,26 +39,32 @@ body {
 }
 
 /* these styles have to be on both the body and html tags */
-body, html {
+body,
+html {
   max-width: 960px;
   margin: 0 auto;
   overflow-x: hidden;
 }
 
 /* this code is necessary for highlight js to render properly. */
-.hljs, pre code {
+.hljs,
+pre code {
   white-space: pre;
   overflow-x: auto;
 }
 
-.hljs, pre code, var {
+.hljs,
+pre code,
+var {
   font-family: Consolas, monospace !important;
   font-size: 90% !important;
 }
 
 /* MOBILE STYLES */
 @media (max-width: 640px) {
-  .hljs, pre code, var {
+  .hljs,
+pre code,
+var {
     font-size: 75% !important;
   }
 }
@@ -88,9 +94,9 @@ a img {
   background-position: center;
   margin-left: auto;
   margin-right: auto;
-  border: 3px double #B7B7B7;
+  border: 3px double #b7b7b7;
   font-variant: small-caps;
-  color: #6B6B6B;
+  color: #6b6b6b;
   letter-spacing: 0.25em;
 }
 
@@ -112,7 +118,8 @@ a img {
     flex-direction: column;
   }
 }
-#main-wrapper, #sidebar-wrapper {
+#main-wrapper,
+#sidebar-wrapper {
   word-wrap: break-word;
   /* fix for long text breaking sidebar float in IE */
   overflow: hidden;
@@ -179,14 +186,17 @@ h2 {
   color: #cc6600;
 }
 
-.post h3 a, .post h3 a:visited, .post h3 strong {
+.post h3 a,
+.post h3 a:visited,
+.post h3 strong {
   display: block;
   text-decoration: none;
   color: #cc6600;
   font-weight: normal;
 }
 
-.post h3 strong, .post h3 a:hover {
+.post h3 strong,
+.post h3 a:hover {
   color: #333333;
 }
 
@@ -215,6 +225,9 @@ h2 {
   padding: 0;
   border: 0;
   height: 1em;
+}
+.post img.dataImage:hover {
+  cursor: pointer;
 }
 
 .tr-caption-container {
@@ -313,7 +326,9 @@ h2 {
   line-height: 1.5em;
 }
 
-form#custom-search-form, .sidebar .widget, .main .widget {
+form#custom-search-form,
+.sidebar .widget,
+.main .widget {
   border-bottom: 1px dotted #cccccc;
   margin: 0 0 1.5em;
   padding: 0 0 1.5em;
@@ -399,7 +414,8 @@ form#custom-search-form input[type=submit] {
 }
 
 /* END OF BLOGGER b:skin tag */
-.wait-hljs, .wait-backtickvar {
+.wait-hljs,
+.wait-backtickvar {
   visibility: hidden;
 }
 
@@ -413,7 +429,7 @@ form#custom-search-form input[type=submit] {
 }
 
 var {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   border: 1px solid #f0f0f0;
   padding: 1px 3px;
   border-radius: 3px;
@@ -436,7 +452,7 @@ div.post div.post-body var {
   font-family: monospace;
   font-style: normal;
   font-weight: bold;
-  color: #3F3F3F;
+  color: #3f3f3f;
 }
 
 table.tbl {
@@ -451,7 +467,7 @@ table.tbl th {
 }
 
 table.tbl tr:nth-child(even) td {
-  background-color: #DCEEF9;
+  background-color: #dceef9;
 }
 
 table.tbl td {
@@ -459,18 +475,19 @@ table.tbl td {
 }
 
 table.tbl th {
-  border-left: 1px solid #6B6B6B;
+  border-left: 1px solid #6b6b6b;
   background-color: #003366;
   color: white;
   font-weight: bold;
 }
 
-h4, h5 {
-  color: #CC6600;
+h4,
+h5 {
+  color: #cc6600;
 }
 
 .post a:visited {
-  color: #5588AA;
+  color: #5588aa;
 }
 
 img.center {

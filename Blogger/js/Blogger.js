@@ -1,6 +1,6 @@
 var blogUtils = {};
 
-blogUtils.alert = function(str) {
+blogUtils.alert = function (str) {
     if (typeof alert !== "undefined") {
         alert(str);
     }
@@ -8,7 +8,7 @@ blogUtils.alert = function(str) {
 
 blogUtils.alertShown = false;
 
-blogUtils.log = function(str) {
+blogUtils.log = function (str) {
     console.log('\x1b[36m%s\x1b[0m', str instanceof Object ? JSON.stringify(str) : str);  //cyan
 }
 
@@ -59,8 +59,8 @@ blogUtils.replaceBacktickWithVar = function (body) {
             this.alertShown = true;
         }
         this.log({
-            input : body,
-            output : output
+            input: body,
+            output: output
         });
     }
 
@@ -69,7 +69,7 @@ blogUtils.replaceBacktickWithVar = function (body) {
 
 blogUtils.substituteBacktickWithVar_ignoreTags = ['PRE', 'CODE', 'VAR', 'SCRIPT'];
 
-blogUtils.isIgnoredElement = function(e) {
+blogUtils.isIgnoredElement = function (e) {
     // e is a pre, code, var, script element, or a git gist
     return (blogUtils.substituteBacktickWithVar_ignoreTags.indexOf(e.nodeName) !== -1) || (e.nodeName === "DIV" && e.classList.contains("gist"));
 }
@@ -93,15 +93,15 @@ blogUtils.substituteBacktickWithVar = function ($elem) {
     });
 };
 
-blogUtils.highlightPreCode = function() {
+blogUtils.highlightPreCode = function () {
     $('pre code').each(function (i, e) {
         var $e = $(e);
 
         if ($e.parents('div.showdown').length === 0) {
             $e.text($e.text().trim());
             hljs.highlightBlock(e);
-            
-            [ $e, $e.parent() ].forEach(function($elem) {
+
+            [$e, $e.parent()].forEach(function ($elem) {
                 if ($elem[0].hasAttribute('height')) {
                     $elem.css('max-height', $elem.attr('height'));
                     $elem.css('overflow-y', 'auto');
@@ -112,16 +112,16 @@ blogUtils.highlightPreCode = function() {
     });
 };
 
-blogUtils.warnNonLabelledPosts = function() {
-    $('div.post-outer:eq(0)').each(function(index) { 
+blogUtils.warnNonLabelledPosts = function () {
+    $('div.post-outer:eq(0)').each(function (index) {
         if ($.trim($(this).find('span.post-labels').text()).length == 0) {
             $(this).addClass('no-labels');
             $(this).find('.post-title').append("<span style='color: red; font-size: large; font-weight: bold'>NO LABELS!!! NO LABELS!!!</span>");
-        } 
+        }
     });
 };
 
-blogUtils.processShowdownXmps = function() {
+blogUtils.processShowdownXmps = function () {
     var showdownConverter = new showdown.Converter();
     showdownConverter.setFlavor('github');
 
@@ -139,27 +139,33 @@ blogUtils.processShowdownXmps = function() {
     });
 };
 
-blogUtils.configureMathJax = function() {
+blogUtils.configureMathJax = function () {
     window.tex2jaxProcessσ = '.tex2jax_process';
 
-    $(function() {
+    $(function () {
         $(window.tex2jaxProcessσ).css('visibility', 'hidden');
     });
 
-    MathJax.Hub.Register.StartupHook("End",function () {
+    MathJax.Hub.Register.StartupHook("End", function () {
         $(window.tex2jaxProcessσ).css('visibility', '');
     });
 
     // documentation: http://docs.mathjax.org/en/latest/options/tex2jax.html
     MathJax.Hub.Config({
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
         jax: ["input/TeX", "output/HTML-CSS"],
         tex2jax: {
-            inlineMath: [ ['$[',']'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            inlineMath: [['$[', ']'], ["\\(", "\\)"]],
+            displayMath: [['$$', '$$'], ["\\[", "\\]"]],
             balanceBraces: true
         },
         "HTML-CSS": { availableFonts: ["TeX"] },
         messageStyle: "none"
+    });
+};
+
+blogUtils.makeDataImagesClickable = function () {
+    $('.post img[src^="data"]').addClass('dataImage').click(function () {
+        window.open($(this).attr('src'));
     });
 };
