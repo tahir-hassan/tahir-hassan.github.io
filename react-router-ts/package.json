@@ -18,7 +18,7 @@
     "@types/react-dom": "^16.8.3",
     "@types/react-router-dom": "^4.3.2",
     "axios": "^0.18.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mobx": "^4.9.4",
     "mobx-react": "^5.4.3",
     "opener": "^1.5.1"
